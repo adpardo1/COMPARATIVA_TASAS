@@ -289,7 +289,8 @@ if resultados:
         except ValueError:
             return ''
 
-    st.dataframe(df_vista.style.applymap(
+    # CORRECCIÓN: .applymap reemplazado por .map para cumplimiento con Pandas 2.1+
+    st.dataframe(df_vista.style.map(
         colorear_impacto, 
         subset=['Impacto Anual Proyectado ($)']
     ), use_container_width=True)
