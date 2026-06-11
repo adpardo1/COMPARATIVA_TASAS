@@ -74,7 +74,7 @@ def cargar_techos_bce(archivo_path):
             'Inmobiliario': float(df_bce_actual['Inmobiliario'] if 'Inmobiliario' in df_bce.columns else 10.58)
         }
     except Exception as e:
-        st.warning(f"⚠️ Error al leer techos BCE ({str(e)}). Usando tasas regulatorias por defecto.")
+        #st.warning(f"⚠️ Error al leer techos BCE ({str(e)}). Usando tasas regulatorias por defecto.")
         return valores_defecto
 
 
