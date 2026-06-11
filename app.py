@@ -61,9 +61,9 @@ def cargar_techos_bce(archivo_path):
     # Valores de contingencia por defecto (Tasas máximas referenciales)
     valores_defecto = {'Consumo': 16.77, 'Microcrédito': 28.23, 'Inmobiliario': 10.58}
     
-    if not os.path.exists(archivo_path):
-        st.warning(f"⚠️ Archivo de techos BCE `{archivo_path}` no encontrado. Usando tasas regulatorias por defecto.")
-        return valores_defecto
+   # if not os.path.exists(archivo_path):
+    #    st.warning(f"⚠️ Archivo de techos BCE `{archivo_path}` no encontrado. Usando tasas regulatorias por defecto.")
+    #    return valores_defecto
         
     try:
         df_bce = pd.read_csv(archivo_path)
